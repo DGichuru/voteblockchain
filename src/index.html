@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <title>Log in</title>
+</head>
+<body>
+    <div class="loginbox">
+        <img src="assets/images.jpg" class="avatar">
+        <h1>Log In</h1>
+        <form action="login.php" method="POST"   id="loginform">
+            <p>Username</p>
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="pass" id="password" placeholder="Enter Reg. No">
+            <input type="submit"  onClick="" name="add_detail" class="btn" value="Log In">
+            
+                
+           </input>
+            
+        </form>
+        <input type="submit" id='loginButton' onclick="location.href='home.html'" class="btn" value="Login with MetaMask">
+
+    </div>
+
+    <script>
+        window.userWalletAddress = null
+        const loginButton = document.getElementById('loginButton')
+        const userWallet = document.getElementById('userWallet')
+    
+        function toggleButton() {
+          if (!window.ethereum) {
+            loginButton.innerText = 'MetaMask is not installed'
+            loginButton.classList.remove('bg-purple-500', 'text-white')
+            loginButton.classList.add('bg-gray-500', 'text-gray-100', 'cursor-not-allowed')
+            return false
+          }
+    
+          loginButton.addEventListener('click', loginWithMetaMask)
+        }
+    
+        async function loginWithMetaMask() {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+            .catch((e) => {
+              console.error(e.message)
+              return
+            })
+          if (!accounts) { return }
+    
+          window.userWalletAddress = accounts[0]
+          userWallet.innerText = window.userWalletAddress
+          loginButton.innerText = 'Sign out of MetaMask'
+    
+          loginButton.removeEventListener('click', loginWithMetaMask)
+          setTimeout(() => {
+            loginButton.addEventListener('click', signOutOfMetaMask)
+          }, 200)
+        }
+    
+        function signOutOfMetaMask() {
+          window.userWalletAddress = null
+          userWallet.innerText = ''
+          loginButton.innerText = 'Sign in with MetaMask'
+    
+          loginButton.removeEventListener('click', signOutOfMetaMask)
+          setTimeout(() => {
+            loginButton.addEventListener('click', loginWithMetaMask)
+          }, 200)
+        }
+    
+        window.addEventListener('DOMContentLoaded', () => {
+          toggleButton()
+        });
+      </script>
+    
+</body>
+</html>
