@@ -17,7 +17,7 @@ contract Election {
     // voted event
     //event votedEvent(uint256 indexed _candidateId);
     //public
-    constructor()  {
+    constructor() public {
         addCandidate("Daniel ");
         addCandidate("John ");
         addCandidate("Onyango ");

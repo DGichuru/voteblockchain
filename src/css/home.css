@@ -212,36 +212,4 @@ nav ul li a{
 }
 h2{
     color: white;
-    
-}
-
-.form-group {
-    margin-top: 25px;
-}
-
-.text-end {
-    text-align: end;
-    font-weight: 500;
-    color: crimson;
-    text-transform: none;
-}
-
-#tag {
-    color: darkorange;
-}
-
-#voteStatus {
-    padding: 3rem;
-    text-transform: none;
-    background-color: #dff3e3;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-    text-decoration: rgb(4, 247, 166);
-    color: darkgreen;
-}
-#note {
-    font-size: small;
-    color: red;
-    text-transform: none;
 }

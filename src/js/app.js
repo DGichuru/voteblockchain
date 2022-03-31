@@ -49,7 +49,7 @@ App = {
         web3.eth.getCoinbase(function (err, account) {
             if (err === null) {
                 App.account = account;
-                $("#accountAddress").html("<span id='accountTag'>Your Account :</span> <span id='myAccount'>" + account + "</span>");
+                $("#accountAddress").html("<span id='accountTag'>Your Wallet Account :</span> <span id='myAccount'>" + account + "</span>");
             }
         });
 
@@ -69,10 +69,27 @@ App = {
                     var id = candidate[0];
                     var name = candidate[1];
                     var voteCount = candidate[2];
-
+                    //Render canditates
+                    //var cardTemplate = $("#candname").html( "<span id='accountTag'>Your Wallet Account :</span> <span id='myAccount'>" + name + "</span>" );
+                    //candidatesResult.append(cardTemplate)
                     // Render candidate Result
-                    var candidateTemplate = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + voteCount + "</td></tr>"
-                    candidatesResults.append(candidateTemplate);
+                    var candTemplate = `<div class="card4 c5">
+                                            <div class="card__content">
+                                            <h3 class="card__header" id="candName">${name} </h3> 
+                                            <form onSubmit="App.castVote(); return false;" id="candidatesSelect" >                                                                                       
+                                            <button type="submit"  class="card__button">Vote  </button>
+                                            <form>
+                                            <button class="card__button">Votes  ${voteCount} </button>
+                                            </div>
+                                        </div> `
+                                        
+                    candidatesResults.append(candTemplate);                    
+                //    var candidateTemplate = "<tr><td>" 
+                //                             + id + "</td><td>"
+                //                            + name + "</td><td>"
+                //                             + voteCount + "</td></tr>"
+
+                //    candidatesResults.append(candidateTemplate);
 
                     // Render candidate ballot option
                     var candidateOption = "<option value=''" + id + "' >" + name + "</ option>"
@@ -105,7 +122,9 @@ App = {
         }).catch(function (err) {
             console.error(err);
         });
-    }
+    },
+
+   
 };
 
 $(function () {
