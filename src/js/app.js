@@ -76,9 +76,10 @@ App = {
                     var candTemplate = `<div class="card4 c5">
                                             <div class="card__content">
                                             <h3 class="card__header" id="candName">${name} </h3> 
-                                            <form onSubmit="App.castVote(); return false;" id="candidatesSelect" >                                                                                       
+                                            <form onSubmit="App.castVote();" id="candidatesSelect" >                                                                                       
                                             <button type="submit"  class="card__button">Vote  </button>
                                             <form>
+                                            
                                             <button class="card__button">Votes  ${voteCount} </button>
                                             </div>
                                         </div> `
