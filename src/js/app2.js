@@ -87,11 +87,11 @@ App = {
 
                     // Render candidate Result
                     //var candidateTemplate = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + voteCount + "</td></tr>"
-                   // candidatesResults.append(candidateTemplate); 
+                   // candidatesResults.append(candidateTemplate); ${voteCount}
                    var candidateTemplate = `<div class="card4 c5">
                                             <div class="card__content">
                                             <h3 class="card__header" id="candName">${name} </h3> 
-                                            <button class="card__button">Votes ${voteCount} </button>                                             
+                                            <button class="card__button">Vote  </button>                                             
                                             
                                             </div>
                                         </div> `

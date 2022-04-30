@@ -21,12 +21,11 @@ contract Election {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     } 
-    
+
     constructor() public {
         addCandidate("Daniel ");
         addCandidate("John ");
         addCandidate("Onyango ");
-        addCandidate("Oluwaseun ");
         addCandidate("Joan ");
     }
 
