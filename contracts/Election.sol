@@ -17,16 +17,19 @@ contract Election {
     // voted event
     //event votedEvent(uint256 indexed _candidateId);
     //public
-    constructor()  {
-        addCandidate("Daniel ");
-        addCandidate("John ");
-        addCandidate("Onyango ");
-    }
-
     function addCandidate(string memory _name) private {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+    } 
+
+    constructor() public {
+        addCandidate("Daniel ");
+        addCandidate("John ");
+        addCandidate("Onyango ");
+        addCandidate("Joan ");
     }
+
+    
 
     function vote(uint256 _candidateId) public {
         // require that they haven't voted before

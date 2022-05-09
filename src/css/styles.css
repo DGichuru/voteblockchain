@@ -123,7 +123,11 @@ label {
     text-decoration: rgb(4, 247, 166);
     color: darkgreen;
 }
-
+#note {
+    font-size: small;
+    color: red;
+    text-transform: none;
+}
 #myAccount {
     padding-top: 1rem;
     color: dimgray;
@@ -134,8 +138,3 @@ label {
     font-size: medium;
 }
 
-#note {
-    font-size: small;
-    color: red;
-    text-transform: none;
-}
