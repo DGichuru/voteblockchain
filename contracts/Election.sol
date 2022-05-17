@@ -27,6 +27,16 @@ contract Election {
         addCandidate("John ");
         addCandidate("Onyango ");
         addCandidate("Joan ");
+        addCandidate("Ochieng ");
+        addCandidate("Kamau ");
+        addCandidate("Kimani ");
+        addCandidate("Nkuriki ");
+        addCandidate("Mohammed ");
+        addCandidate("Sakai ");
+        addCandidate("Kiptoo ");
+        addCandidate("Kipruto ");
+        addCandidate("Gabriel ");
+        addCandidate("Karua ");
     }
 
     
