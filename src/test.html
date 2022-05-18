@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/results.css">
+    
+  
+
+    <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+    <title>Vote</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="assets/vote.jpg" class="logo">
+            <nav>
+                <ul>
+                    <li><a a href="home2.html">HOME</a></li>
+                    <li><a a href="vote.html">VOTE</a></li>
+                    <li><a a href="">DEPARTMENTS</a></li>
+                    <li><a a href="results.html">RESULTS</a></li>
+                </ul>
+            </nav>
+          
+            <button id="btn" style="font-size:15px">Log Out <i class="fa fa-sign-out"></i></button>
+            
+        </div>
+       
+        <div class="row">
+           
+                
+                <div class="card__container" id="candidatesResults"> 
+                  <div class = "card__content"></div>
+                  <!-- <script>
+                    const p = document.getElementsByClassName("card__content");
+                    for (let i = 0; i < p.length; i++) {
+                      p[i].style.background-image ; linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), "url(src/candidates/" + p[i].innerHTML + ".jpg)";
+                    }
+                    </script> -->
+                    
+             
+                    
+              </div>
+              
+              <!-- <form onSubmit="App.castVote(); return false;">
+                <div class="form-group">
+                  <label for="candidatesSelect">Select Candidate</label>
+                  <select class="form-control" id="candidatesSelect">
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Vote</button>
+                <div id="note">Please note that vote once recorded cannot be changed!</div>
+                <hr />
+              </form> -->
+            </div>                     
+        
+
+    </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/apptest.js"></script>
+    
+</body>
+</html>

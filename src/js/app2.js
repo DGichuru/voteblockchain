@@ -84,12 +84,13 @@ App = {
                     var id = candidate[0];
                     var name = candidate[1];
                     var voteCount = candidate[2];
+                    var img = candidate[3];
 
                     // Render candidate Result
                     //var candidateTemplate = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + voteCount + "</td></tr>"
                    // candidatesResults.append(candidateTemplate); ${voteCount}
                    var candidateTemplate = `<div class="card4 c5">
-                                            <div class="card__content">
+                                            <div class="card__content" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url('${img}')">
                                             <h3 class="card__header" id="candName">${name} </h3> 
                                             <button class="card__button">Vote  </button>                                             
                                             

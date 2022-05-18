@@ -146,7 +146,6 @@ nav ul li a{
   max-height: 300px;
   padding: auto;
   text-align: center;
-  background-image: url();
   border-radius: 10px;
   box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
 }
@@ -171,10 +170,11 @@ nav ul li a{
   display:none;
 }
 
+
 .card__content {
   width: 90%;
   height: 95%;
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url(../assets/c5.jpg);
+  /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url(../candidates/cand5.jpg);   */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,7 +184,12 @@ nav ul li a{
   cursor: pointer;
   box-shadow: 16px 16px 44px #0a0a0a, -16px -16px 44px #282a28;
   transition: 0.3s all ease-in-out;
+  
 }
+
+
+
+
 .card__content:hover {
   margin-top: -10px;
 }

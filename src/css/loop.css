@@ -1,0 +1,12 @@
+.card4 div:nth-child(1) {
+  background-image: "cand5.jpg";
+}
+
+.card4 div:nth-child(2) {
+  background-image: "cand6.jpg";
+}
+
+.card4 div:nth-child(3) {
+  background-image: "cand7.jpg";
+}
+/*# sourceMappingURL=loop.css.map */
