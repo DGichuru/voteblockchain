@@ -1,0 +1,16 @@
+$colors : ("cand5.jpg", "cand6.jpg", "cand7.jpg");
+
+@for $i from 1 through 14{
+  @each $colorsName in $colors{
+    $j : index($colors, $colorsName);
+    .card4{
+      div{
+         &:nth-child(#{$i}){
+          @if($j == $i){
+            background-image : $colorsName; 
+          }
+        } 
+      }
+    }
+  }
+}

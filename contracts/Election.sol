@@ -4,8 +4,10 @@ pragma solidity >=0.4.22 <0.9.0;
 contract Election {
     struct Candidate {
         uint256 id;
-        string name;
+        string name;        
         uint256 voteCount;
+        string img;
+        
     }
 
     mapping(uint256 => Candidate) public candidates;
@@ -17,16 +19,26 @@ contract Election {
     // voted event
     //event votedEvent(uint256 indexed _candidateId);
     //public
-    function addCandidate(string memory _name) private {
+    function addCandidate(string memory _name, string memory _img) private {
         candidatesCount++;
-        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0, _img );
     } 
 
     constructor() public {
-        addCandidate("Daniel ");
-        addCandidate("John ");
-        addCandidate("Onyango ");
-        addCandidate("Joan ");
+        addCandidate("Daniel","../candidates/cand1.jpg");
+        addCandidate("John " ,"../candidates/cand2.jpg");
+        addCandidate("Onyango ", "../candidates/cand3.jpg");
+        addCandidate("Joan ", "../candidates/cand4.jpg");
+        addCandidate("Ochieng ", "../candidates/cand5.jpg");
+        addCandidate("Kamau ", "../candidates/cand6.jpg");
+        addCandidate("Kimani ", "../candidates/cand7.jpg");
+        addCandidate("Nkuriki ", "../candidates/cand8.jpg");
+        addCandidate("Mohammed ", "../candidates/cand9.jpg");
+        addCandidate("Sakai ", "../candidates/cand10.jpg");
+        addCandidate("Kiptoo ", "../candidates/cand11.jpg");
+        addCandidate("Kipruto ", "../candidates/cand12.jpg");
+        addCandidate("Gabriel ", "../candidates/cand13.jpg");
+        addCandidate("Karua ", "../candidates/cand14.jpg");
     }
 
     

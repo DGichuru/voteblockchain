@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKI,AAEK,MAFC,CACJ,GAAG,AACC,UAAW,CAAA,CAAC,EAAK;EAEf,gBAAgB,EATjB,WAAW;CAWb;;AANL,AAEK,MAFC,CACJ,GAAG,AACC,UAAW,CAAA,CAAC,EAAK;EAEf,gBAAgB,EATJ,WAAW;CAW1B;;AANL,AAEK,MAFC,CACJ,GAAG,AACC,UAAW,CAAA,CAAC,EAAK;EAEf,gBAAgB,EATS,WAAW;CAWvC",
+    "sources": [
+        "results.scss"
+    ],
+    "names": [],
+    "file": "results.css"
+}
