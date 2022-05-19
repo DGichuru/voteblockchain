@@ -27,7 +27,7 @@
        
         <div class="row">
             <div class="col">
-                <h2>Chair Person Position Candidates</h2>
+                <h2>Board Members Candidates</h2>
                 </br>
                 <h2 id="accountAddress" > </h2>                
             </div>        
@@ -37,12 +37,16 @@
               </div>
               <form onSubmit="App.castVote(); return false;">
                 <div class="form-group">
-                  <label for="candidatesSelect">Select Candidate</label>
-                  <select class="form-control" id="candidatesSelect">
+                  <label for="candidatesSelect" style="color: white ; font-size: larger;">Select Candidate  </label>
+
+                  <select class="form-control" id="candidatesSelect" >
                   </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Vote</button>
-                <div id="note">Please note that vote once recorded cannot be changed!</div>
+            </br>
+    
+                <button type="submit" class="btn " role="button" >Vote</button> 
+        </br>
+                <div id="note" style="font-size: 20px;">Please note that vote once recorded cannot be changed!</div>
                 <hr />
               </form>
             </div>                     
